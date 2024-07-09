@@ -68,7 +68,8 @@ class weatherClass:
         lable4=Label(self.root,text="PRESSURE",font=("times 14 bold"),fg='white',bg="#4c7b7b").place(x=500,y=300)
         
         # city entry #
-        textfield=Entry(self.root,textvariable==self.var_city,justify=CENTER,width=15,font=("times 25 bold")bg='#545a5a',fg='white',bd=0)
+        textfield = Entry(self.root, textvariable=self.var_city, justify=CENTER, width=15, font=("times 25 bold"), bg='#545a5a', fg='white', bd=0)
+
         textfield.place(x=383,y=35,width=225)
         textfield.focus()
         
