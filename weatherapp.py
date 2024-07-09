@@ -78,13 +78,18 @@ class weatherClass:
         self.myimage_icon = Button(self.root, image=self.search_icon, borderwidth=0, cursor='hand2', bg='#203243', activebackground='#203243',command=self.getweather)
         self.myimage_icon.place(x=615, y=34)
         
-    #def getweather(self):
-        #try:
-        #    pass
+    def getweather(self):
+        try:
+            city=self.var_city.get()
+            geolocator= Nominatim(user_agent='geoapiExercises')
+            location=geolocator.geocode(city)
+            obj=TimezoneFinder()
+            
+            print(obj)
             
             
-       # except Exception as e:
-        #    messagebox.showerror("Weather App","Invalied Entry....")   #
+        except Exception as e:
+            messagebox.showerror("Weather App","Invalied Entry....!")   
 
         
         
