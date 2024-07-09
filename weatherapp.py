@@ -61,6 +61,12 @@ class weatherClass:
         self.var_pressure=Label(self.root,text="",font=("times 15 bold"),fg='black',bg="#08f7f7",justify=CENTER)
         self.var_pressure.place(x=500,y=330)
         
+        # Lable #
+        lable1=Label(self.root,text="DESCRIPTION",font=("times 14 bold"),fg='white',bg="#4c7b7b").place(x=90,y=300)
+        lable2=Label(self.root,text="WIND",font=("times 14 bold"),fg='white',bg="#4c7b7b").place(x=250,y=300)
+        lable3=Label(self.root,text="HUMIDITY",font=("times 14 bold"),fg='white',bg="#4c7b7b").place(x=370,y=300)
+        lable4=Label(self.root,text="PRESSURE",font=("times 14 bold"),fg='white',bg="#4c7b7b").place(x=500,y=300)
+        
         
         
         
