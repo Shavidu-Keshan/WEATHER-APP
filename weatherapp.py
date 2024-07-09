@@ -73,6 +73,21 @@ class weatherClass:
         textfield.place(x=383,y=35,width=225)
         textfield.focus()
         
+        # search button #
+        self.search_icon = PhotoImage(file="arrow1.png").subsample(9)
+        self.myimage_icon = Button(self.root, image=self.search_icon, borderwidth=0, cursor='hand2', bg='#203243', activebackground='#203243',command=self.getweather)
+        self.myimage_icon.place(x=615, y=34)
+        
+    #def getweather(self):
+        #try:
+        #    pass
+            
+            
+       # except Exception as e:
+        #    messagebox.showerror("Weather App","Invalied Entry....")   #
+
+        
+        
         
         
         
