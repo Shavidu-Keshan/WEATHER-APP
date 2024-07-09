@@ -35,6 +35,11 @@ class weatherClass:
         self.var_des=StringVar()
         self.var_localtime=StringVar()
         
+        #country city#
+        self.var_txtcity=Label(self.root,text="",font=("times 30 bold"),fg='black',bg="#08f7f7",justify=CENTER)
+        self.var_txtcity.place(x=0,y=70)
+        self.var_txtcity.focus()
+        
         
         
 if __name__ == "__main__":
