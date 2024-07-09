@@ -35,10 +35,35 @@ class weatherClass:
         self.var_des=StringVar()
         self.var_localtime=StringVar()
         
-        #country city#
+        #our data#
         self.var_txtcity=Label(self.root,text="",font=("times 30 bold"),fg='black',bg="#08f7f7",justify=CENTER)
         self.var_txtcity.place(x=0,y=70)
         self.var_txtcity.focus()
+        
+        self.var_latitude=Label(self.root,text="",font=("times 12 bold"),fg='black',bg="#08f7f7",justify=CENTER)
+        self.var_latitude.place(x=0,y=70)
+        
+        self.var_temppreture=Label(self.root,text="",font=("times 40 bold"),fg='black',bg="#08f7f7",justify=CENTER)
+        self.var_temppreture.place(x=20,y=150)
+        
+        self.var_localtime=Label(self.root,text="",font=("times 15 bold"),fg='black',bg="#08f7f7",justify=CENTER)
+        self.var_localtime.place(x=165,y=220,width=150)
+        
+        self.var_des=Label(self.root,text="",font=("times 14 bold"),fg='black',bg="#08f7f7",justify=CENTER)
+        self.var_des.place(x=90,y=330)
+        
+        self.var_wind=Label(self.root,text="",font=("times 14 bold"),fg='black',bg="#08f7f7",justify=CENTER)
+        self.var_wind.place(x=250,y=330)
+        
+        self.var_humidity=Label(self.root,text="",font=("times 15 bold"),fg='black',bg="#08f7f7",justify=CENTER)
+        self.var_humidity.place(x=370,y=330)
+        
+        self.var_pressure=Label(self.root,text="",font=("times 15 bold"),fg='black',bg="#08f7f7",justify=CENTER)
+        self.var_pressure.place(x=500,y=330)
+        
+        
+        
+        
         
         
         
