@@ -38,7 +38,7 @@ class weatherClass:
         #our data#
         self.var_txtcity=Label(self.root,text="",font=("times 30 bold"),fg='black',bg="#08f7f7",justify=CENTER)
         self.var_txtcity.place(x=0,y=70)
-        self.var_txtcity.focus()
+        
         
         self.var_latitude=Label(self.root,text="",font=("times 12 bold"),fg='black',bg="#08f7f7",justify=CENTER)
         self.var_latitude.place(x=0,y=70)
@@ -67,8 +67,10 @@ class weatherClass:
         lable3=Label(self.root,text="HUMIDITY",font=("times 14 bold"),fg='white',bg="#4c7b7b").place(x=370,y=300)
         lable4=Label(self.root,text="PRESSURE",font=("times 14 bold"),fg='white',bg="#4c7b7b").place(x=500,y=300)
         
-        
-        
+        # city entry #
+        textfield=Entry(self.root,textvariable==self.var_city,justify=CENTER,width=15,font=("times 25 bold")bg='#545a5a',fg='white',bd=0)
+        textfield.place(x=383,y=35,width=225)
+        textfield.focus()
         
         
         
