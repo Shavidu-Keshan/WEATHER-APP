@@ -23,6 +23,20 @@ class weatherClass:
         self.image_label = Label(self.root, image=self.photo_image)
         self.image_label.place(x=0, y=0)
         
+        #Variables#
+        self.var_city=StringVar()
+        self.var_txtcity=StringVar()
+        self.var_latitude=StringVar()
+        self.var_temppreture=StringVar()
+        
+        self.var_humidity=StringVar()
+        self.var_pressure=StringVar()
+        self.var_wind=StringVar()
+        self.var_des=StringVar()
+        self.var_localtime=StringVar()
+        
+        
+        
 if __name__ == "__main__":
     root = Tk()
     obj = weatherClass(root)
