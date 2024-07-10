@@ -14,14 +14,14 @@ class weatherClass:
         self.root.geometry("700x400+325+150")
         self.root.title("Weather App")
         self.root.resizable(False, False)
-        self.root.config(bg='#f8ea28', bd=1)
+        self.root.config(bg='#08f7f7', bd=1)
         
         #background image#
-        self.image = Image.open("weather.jpg")  # Update with your image path
-        self.resized_image = self.image.resize((700, 400))
-        self.photo_image = ImageTk.PhotoImage(self.resized_image)
-        self.image_label = Label(self.root, image=self.photo_image)
-        self.image_label.place(x=0, y=0)
+        #self.image = Image.open("weather.jpg")  # Update with your image path
+        #self.resized_image = self.image.resize((700, 400))
+        #self.photo_image = ImageTk.PhotoImage(self.resized_image)
+        #self.image_label = Label(self.root, image=self.photo_image)
+        #self.image_label.place(x=0, y=0)
         
         #Variables#
         self.var_city=StringVar()
@@ -36,6 +36,8 @@ class weatherClass:
         self.var_wind=StringVar()
         self.var_des=StringVar()
         self.var_localtime=StringVar()
+        
+        
         
         #our data#
         self.var_txtcity=Label(self.root,text="",font=("times 30 bold"),fg='black',bg="#08f7f7",justify=CENTER)
@@ -116,7 +118,7 @@ class weatherClass:
             
             # main data #
             self.var_temppreture.config(text=f"{condition}\n{str(temp)}°C")
-            self.var_localtime.config(text=f"{local_time}\n{current_time}")
+            self.var_localtime.config(text=f"LocalTime \n{current_time}")
             self.var_des.config(text=f"{description}")
             self.var_wind.config(text=f"{wind}")
             self.var_humidity.config(text=f"{humidity}")
