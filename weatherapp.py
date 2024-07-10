@@ -103,8 +103,12 @@ class weatherClass:
             api="https://api.openweathermap.org/data/2.5/weather?q="+ city +"&appid=fcdea6235b8827b03d529092b6f16e97"
             weather_data=requests.get(api).json()
             
-            print(weather_data)
-            
+            condition=weather_data['weather'][0]['main']
+            description=weather_data['weather'][0]['description']
+            temp=int(weather_data['mail']['temp'] -273.15)
+            pressure=weather_data['mail']['pressure']
+            humidity=weather_data['mail']['humidity']
+            wind=weather_data['wind']['speed']
             
             
             
