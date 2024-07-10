@@ -25,6 +25,8 @@ class weatherClass:
         
         #Variables#
         self.var_city=StringVar()
+        self.var_city.set("Kandy")
+        
         self.var_txtcity=StringVar()
         self.var_latitude=StringVar()
         self.var_temppreture=StringVar()
@@ -41,7 +43,7 @@ class weatherClass:
         
         
         self.var_latitude=Label(self.root,text="",font=("times 12 bold"),fg='black',bg="#08f7f7",justify=CENTER)
-        self.var_latitude.place(x=0,y=70)
+        self.var_latitude.place(x=0,y=120)
         
         self.var_temppreture=Label(self.root,text="",font=("times 40 bold"),fg='black',bg="#08f7f7",justify=CENTER)
         self.var_temppreture.place(x=20,y=150)
@@ -85,7 +87,18 @@ class weatherClass:
             location=geolocator.geocode(city)
             obj=TimezoneFinder()
             
-            print(obj)
+            # logitude & Latitude #
+            
+            result = obj.timezone_at(lng=location.longitude,lat=location.latitude)
+            
+            self.var_txtcity.config(text=f"{result}")
+            self.var_latitude.config(text=f"{round(location.latitude,4)}°N, {round(location.longitude,4)}°E")
+            
+            
+            
+            
+            
+            
             
             
         except Exception as e:
