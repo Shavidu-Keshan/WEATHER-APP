@@ -17,7 +17,7 @@ class weatherClass:
         self.root.config(bg='#f8ea28', bd=1)
         
         #background image#
-        self.image = Image.open("weather2.jpg")  # Update with your image path
+        self.image = Image.open("weather.jpg")  # Update with your image path
         self.resized_image = self.image.resize((700, 400))
         self.photo_image = ImageTk.PhotoImage(self.resized_image)
         self.image_label = Label(self.root, image=self.photo_image)
@@ -121,6 +121,8 @@ class weatherClass:
             self.var_wind.config(text=f"{wind}")
             self.var_humidity.config(text=f"{humidity}")
             self.var_pressure.config(text=f"{pressure}")
+            
+            
             
             
             
