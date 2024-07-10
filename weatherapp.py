@@ -103,12 +103,26 @@ class weatherClass:
             api="https://api.openweathermap.org/data/2.5/weather?q="+ city +"&appid=fcdea6235b8827b03d529092b6f16e97"
             weather_data=requests.get(api).json()
             
+            # Weather API Error
+            if 'weather' not in weather_data or 'main' not in weather_data or 'wind' not in weather_data:
+                raise ValueError("Weather data not found or incomplete for the specified city.")
+            
             condition=weather_data['weather'][0]['main']
             description=weather_data['weather'][0]['description']
-            temp=int(weather_data['mail']['temp'] -273.15)
-            pressure=weather_data['mail']['pressure']
-            humidity=weather_data['mail']['humidity']
+            temp=int(weather_data['main']['temp'] -273.15)
+            pressure=weather_data['main']['pressure']
+            humidity=weather_data['main']['humidity']
             wind=weather_data['wind']['speed']
+            
+            # main data #
+            self.var_temppreture.config(text=f"{condition}\n{str(temp)}°C")
+            self.var_localtime.config(text=f"{local_time}\n{current_time}")
+            self.var_des.config(text=f"{description}")
+            self.var_wind.config(text=f"{wind}")
+            self.var_humidity.config(text=f"{humidity}")
+            self.var_pressure.config(text=f"{pressure}")
+            
+            
             
             
             
