@@ -94,6 +94,12 @@ class weatherClass:
             self.var_txtcity.config(text=f"{result}")
             self.var_latitude.config(text=f"{round(location.latitude,4)}°N, {round(location.longitude,4)}°E")
             
+            # local time of request city #
+            home=pytz.timezone(result)
+            local_time=datetime.now(home)
+            current_time=local_time.strftime("%I:%M:%p")
+            
+          
             
             
             
