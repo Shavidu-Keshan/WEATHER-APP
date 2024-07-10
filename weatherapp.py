@@ -99,7 +99,11 @@ class weatherClass:
             local_time=datetime.now(home)
             current_time=local_time.strftime("%I:%M:%p")
             
-          
+            # request wether data #
+            api="https://api.openweathermap.org/data/2.5/weather?q="+ city +"&appid=fcdea6235b8827b03d529092b6f16e97"
+            weather_data=requests.get(api).json()
+            
+            print(weather_data)
             
             
             
